@@ -2,7 +2,6 @@
 test/*
 outputfiles/*
 frontend/*
-Pipfile.lock
 project_secrets.py
 .vscode/settings.json
 
