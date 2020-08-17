@@ -1,0 +1,11 @@
+- crawl followers
+- program users
+- authentication
+- form validation
+- check for 'username' exist in our db in apis
+- stopping tasks
+- logging (with the use of socketio)
+- tweet explorer page
+- token explorer page (showing tokens with their total frequency)
+- username filter for charts
+- search api for usernames

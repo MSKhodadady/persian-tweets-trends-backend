@@ -1,0 +1,8 @@
+{
+    "crawl-interval-hour": 2,
+    "use-proxy": true,
+    "proxy-host": "localhost",
+    "proxy-port": 9050,
+    "proxy-type": "socks5",
+    "show-twint-output": true
+}

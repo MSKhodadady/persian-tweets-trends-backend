@@ -1,0 +1,1 @@
+ALTER TABLE public.twitter_user ALTER COLUMN created_at SET DEFAULT now();

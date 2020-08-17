@@ -1,0 +1,22 @@
+/api/user
+    get -> returns 10 user
+        ?count
+        ?start
+    put -> create a user
+        {
+            "username"
+        }
+    delete -> deletes a "user" or "tweets" of user (if "delete-tweets" specified)
+        {
+            "username"
+            "delete-tweets"?: {
+                "start"
+                "end"
+            }
+        }
+    patch -> for stopping total crawl for a user
+        {
+            "username"
+            "is-crawl :bool"
+        }
+    post -> crawling a user's tweet
