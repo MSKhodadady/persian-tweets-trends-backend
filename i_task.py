@@ -6,9 +6,7 @@ import asyncio
 from datetime import datetime
 
 from i_database import DBConnection, DBRow, get_db_context
-from i_program_settings import get_settings
 
-total_crawl_task: asyncio.Task = None
 
 async def create_task(task_type, task_state, crawl_since: datetime, crawl_until: datetime, task_user=None) -> int:
     """
@@ -44,7 +42,7 @@ async def create_task(task_type, task_state, crawl_since: datetime, crawl_until:
 
 async def change_task_state(task_id, new_task_state):
     """
-    channges the task state by its id (task_id).
+    changes the task state by its id (task_id).
     """
     conn: DBConnection
     async with await get_db_context() as conn:

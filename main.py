@@ -33,7 +33,7 @@ def prepare_tornado():
         rout_url(r"/api/dict", handlers.dictionary.DictionaryHandler),
         rout_url(r"/api/task", handlers.task.TaskHandler),
         rout_url(r"/api/chart", handlers.chart.ChartHandler),
-        rout_url(r"/api/chart/search", handlers.chart.ChartSearchHandler),
+        # rout_url(r"/api/chart/search", handlers.chart.ChartSearchHandler),
 
         rout_url(
             r"/(.*)", tornado.web.StaticFileHandler,

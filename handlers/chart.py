@@ -100,27 +100,27 @@ class ChartHandler(MainHandler):
             ))
         })
 
-class ChartSearchHandler(MainHandler):
+# class ChartSearchHandler(MainHandler):
 
-    async def get(self):
+#     async def get(self):
 
-        token = self.get_json_arg('token')
+#         token = self.get_json_arg('token')
 
-        conn: db.DBConnection
-        async with await db.get_db_context() as conn:
-            async with conn.transaction():
+#         conn: db.DBConnection
+#         async with await db.get_db_context() as conn:
+#             async with conn.transaction():
 
-                rows: db.DBRows = await conn.fetch(
-                    f'''
-                    select distinct(tt."token") from tweet_token tt where tt."token" like '%{token}%';
-                    '''
-                )
+#                 rows: db.DBRows = await conn.fetch(
+#                     f'''
+#                     select distinct(tt."token") from tweet_token tt where tt."token" like '%{token}%';
+#                     '''
+#                 )
 
-                self.write({
-                    "data": list(
-                        map(lambda x: x.get('token'), rows)
-                    )
-                })
+#                 self.write({
+#                     "data": list(
+#                         map(lambda x: x.get('token'), rows)
+#                     )
+#                 })
 
 
 #pylint: disable=too-many-arguments

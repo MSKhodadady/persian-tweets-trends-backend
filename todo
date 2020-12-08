@@ -9,3 +9,6 @@
 - token explorer page (showing tokens with their total frequency)
 - username filter for charts
 - search api for usernames
+- solve the big bug of duplicate token when a token replaces with another. both in 
+    - crawl_analyze/crawl.py when saving tweet tokens
+    - handlers/dictionary.py when adding new item, in "put" method.
